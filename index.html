@@ -68,10 +68,10 @@
 <script>
     var a1= 0;
     var cont = 50
+    function showHearts() {
     for (let a1 = 0; a1 < cont; a1++) {
-        function showHearts() {
-  // Cria um coração
-  const heart = document.createElement('div');
+ // Cria um coração
+ const heart = document.createElement('div');
   heart.classList.add('heart');
   heart.style.left = Math.random() * window.innerWidth + 'px';
   document.body.appendChild(heart);
@@ -80,9 +80,10 @@
   setTimeout(() => {
     heart.remove();
   }, 1000);
-}
+        
     }
 
+}
 </script>
 
 </body>
