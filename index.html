@@ -74,8 +74,8 @@ function showHearts() {
         // Cria um coração
         const heart = document.createElement('div');
         heart.classList.add('heart');
-      
-        heart.style.top = Math.random() * document.body.clientHeight + 'cm';
+        heart.style.left = Math.random() * document.body.clientWidth + 'px';
+        heart.style.top = Math.random() * document.body.clientHeight + 'px';
         document.body.appendChild(heart);
 
         // Remove o coração depois de algum tempo
