@@ -66,24 +66,25 @@
 </div>
 
 <script>
-    var a1= 0;
-    var cont = 50
-    function showHearts() {
-    for (let a1 = 0; a1 < cont; a1++) {
- // Cria um coração
- const heart = document.createElement('div');
-  heart.classList.add('heart');
-  heart.style.left = Math.random() * window.innerWidth + 'px';
-  document.body.appendChild(heart);
-  
-  // Remove o coração depois de algum tempo
-  setTimeout(() => {
-    heart.remove();
-  }, 10000);
-        
-    }
+var a1 = 0;
+var cont = 50;
 
+function showHearts() {
+    for (let a1 = 0; a1 < cont; a1++) {
+        // Cria um coração
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.style.left = Math.random() * document.body.clientWidth + 'px';
+        heart.style.top = Math.random() * document.body.clientHeight + 'px';
+        document.body.appendChild(heart);
+
+        // Remove o coração depois de algum tempo
+        setTimeout(() => {
+            heart.remove();
+        }, 10000);
+    }
 }
+
 </script>
 
 </body>
